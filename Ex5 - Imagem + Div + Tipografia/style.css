@@ -14,9 +14,30 @@
     background-color: #ffc72c;
     color: #fff;
     font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    /* position: relative;
+    position: absolute; */
+    /* position: fixed; */
+    /* top: 100px
+    width */
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+
+
   }
   
-  
+  .nav-links{
+    /* display: none; */
+    /* visibility: visible;
+    opacity: 0.5; */ 
+    display: flex;
+    list-style-type: none;
+    gap: 1rem;
+  }
   .nav-links a {
     
     color: #1D428A;
@@ -24,16 +45,46 @@
   
   /* Hero */
   .hero {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-image: url('https://www.fiap.com.br/imgs/institucional/photos-gallery/large/19.png');
     background-size: cover;
     background-position: center;
     height: 400px;
     text-align: center;
+    gap: 2rem;
+    position: relative;
   }
+
+  .overlay{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.418) ;
+    width: 100%;
+    height: 100%;
+  }
+
 
   .hero a{
     color: #fff;
     font-size: 26px;
+    text-decoration: none;
+    background-color: #1D428A;
+    padding: 1rem 1.5rem;
+    border-radius: .7rem;
+    z-index: 1;
+
+  }
+  .destaque{
+    color: aqua;
+  }
+
+  .hero a:hover{
+    border-bottom: #fff;
+    color: #1D428A;
+    background-color: #fff;
+    transition: background-color .5s;
   }
   
   /* .hero::after {
@@ -47,9 +98,16 @@
     color: white;
     font-size: 48px;
     font-weight: bold;
+    z-index: 2;
   }
 
+  .painel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
 
+    }
   
   .card {
     width: 200px;
@@ -59,8 +117,8 @@
     font-weight: bold;
     color: white;
     margin: 10px;
-    text-align: center
-  }
+    text-align: center;
+  } 
   
   .titulo-card, .descricao-card {
     color: #1D428A;
